@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    font-size: .9rem;
+}
+
+.container {
+    display: flex;
+    width: 60%;
+    margin: 2em auto;
+    background-color: #1b1c1e;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px 5px black;
+    justify-content: space-between;
+}
+
+.heroImg {
+    width: 40%;
+    align-self: center;
+}
+
+.heroImg img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+}
+
+.movie-info {
+    width: 57%;
+    padding: .5em;
+}
+
+h2 ~ p {
+    width: 90%;
+}
+
+h1 {
+    color: white;
+}
+
+.search-container {
+    background-image: url(movie.jpg);
+    background-size: cover;
+    height: 150px;
+    background-color: rgb(51, 50, 50);
+    background-blend-mode: overlay;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="search"] {
+    padding: 1em 8em;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+
+input[type="search"]:hover,
+input[type="search"]:focus {
+    background-color: #4a4b4f;
+    color: white;
+    border: 1px solid white;
+}
+
+#btn-search {
+    padding: 1em 2em;
+    margin-left: .9em;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: white;
+    color: #02162a;
+    border: 0;
+}
+
+#btn-search:hover,
+#btn-search:focus {
+    background-color: #004445;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .heroImg {
+        width: 100%;
+    }
+
+    input[type="search"] {
+        padding: 1em 3em;
+    }
+
+    #btn-search {
+        padding: 1em;
+    }
+
+    .heroImg img {
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+
+    .movie-info {
+        padding: 1em;
+        width: 90%;
+        text-align: justify;
+        margin: 0 auto;
+    }
+
+    h2 ~ p {
+        width: 100%;
+    }
+}
